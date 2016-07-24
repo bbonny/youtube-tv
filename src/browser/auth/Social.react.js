@@ -37,11 +37,11 @@ class Social extends Component {
     return (
       <div className="social">
         <button
-          data-provider="facebook"
+          data-provider="google"
           disabled={disabled}
           onClick={this.onButtonClick}
         >
-          <FormattedMessage {...buttonsMessages.facebookSignIn} />
+          <FormattedMessage {...buttonsMessages.googleSignIn} />
         </button>
       </div>
     );

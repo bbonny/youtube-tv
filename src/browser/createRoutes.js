@@ -11,6 +11,7 @@ import React from 'react';
 import Settings from './me/SettingsPage.react';
 import SignIn from './auth/SignInPage.react';
 import Todos from './todos/TodosPage.react';
+import Youtube from './youtube/YoutubePage.react';
 import { IndexRoute, Route } from 'react-router';
 
 export default function createRoutes(getState) {
@@ -25,6 +26,7 @@ export default function createRoutes(getState) {
   return (
     <Route component={App} path="/">
       <IndexRoute component={Home} />
+      <Route component={Youtube} path="youtube" />
       <Route component={Fields} path="fields" />
       <Route component={Firebase} path="firebase" />
       <Route component={Intl} path="intl" />

@@ -5,6 +5,7 @@ import device from './device/reducer';
 import intl from './intl/reducer';
 import todos from './todos/reducer';
 import users from './users/reducer';
+import youtube from './youtube/reducer';
 import { SIGN_OUT } from './auth/actions';
 import { combineReducers } from 'redux';
 import { fieldsReducer as fields } from './lib/redux-fields';
@@ -40,6 +41,7 @@ export default function configureReducer(initialState, platformReducers) {
     routing,
     todos,
     users,
+    youtube,
   });
 
   // The power of higher-order reducers, http://slides.com/omnidan/hor

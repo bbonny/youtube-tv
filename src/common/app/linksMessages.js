@@ -33,4 +33,8 @@ export default defineMessages({
     defaultMessage: 'Offline',
     id: 'app.links.offline'
   },
+  youtube: {
+    defaultMessage: 'Youtube',
+    id: 'app.links.youtube'
+  },
 });

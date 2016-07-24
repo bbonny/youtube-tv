@@ -22,10 +22,8 @@ export const FIREBASE_SIGN_UP_START = 'FIREBASE_SIGN_UP_START';
 export const FIREBASE_SIGN_UP_SUCCESS = 'FIREBASE_SIGN_UP_SUCCESS';
 export const FIREBASE_START = 'FIREBASE_START';
 
-const facebookPermissions = [
-  'email',
-  'public_profile',
-  'user_friends',
+const googlePermissions = [
+  'email'
 ];
 
 const validateEmailAndPassword = (validate, fields) => validate(fields)
@@ -60,11 +58,11 @@ const emailSignIn = async (firebaseAuth, validate, { email, password }) => {
 };
 
 const socialSignIn = async (firebaseAuth, providerName) => {
-  invariant(providerName === 'facebook',
+  invariant(providerName === 'google',
    `${providerName} provider is not yet supported.`);
   // firebase.google.com/docs/auth/web/facebook-login
-  const provider = new firebaseAuth.FacebookAuthProvider();
-  provider.addScope(facebookPermissions.join(','));
+  const provider = new firebaseAuth.GoogleAuthProvider();
+  provider.addScope(googlePermissions.join(','));
   try {
     return await firebaseAuth().signInWithPopup(provider);
   } catch (error) {

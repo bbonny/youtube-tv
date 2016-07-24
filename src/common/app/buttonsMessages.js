@@ -21,9 +21,9 @@ export default defineMessages({
     defaultMessage: 'Edit',
     id: 'app.buttons.edit'
   },
-  facebookSignIn: {
-    defaultMessage: 'Login with Facebook',
-    id: 'auth.social.facebookSignIn'
+  googleSignIn: {
+    defaultMessage: 'Login with Google',
+    id: 'auth.social.googleSignIn'
   },
   save: {
     defaultMessage: 'Save',
